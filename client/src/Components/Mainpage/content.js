@@ -1,7 +1,8 @@
 import React from "react";
 import FontAwesome from 'react-fontawesome';
 import 'bootstrap/dist/css/bootstrap.css';
-import { colors } from "@material-ui/core";
+import Button from '@material-ui/core/Button';
+
 
 const Background = require("../images/particles2.jpg");
 const Background1 = require("../images/particles1.jpg");
@@ -61,19 +62,61 @@ const Content = ()=> (
 			</div>
 
 			<div className="container-fluid">
+				<p style={{textAlign:'center'}}>
+					<Button size="large" disabled>
+						<h2 style={{fontFamily:'Courier New', color:'#031dad', fontWeight:'bold'}}>
+							Sahil.
+						</h2>
+					</Button>
+				</p>
 				<ul className="list-inline list-social" style={{textAlign:'center'}}>
 					<li className="list-inline-item social-linkedin">
 						<a style={{padding:'25px'}} target="blank" href="https://www.linkedin.com/in/kumarsgoyal/">
 						<FontAwesome name="linkedin" className="mb-3" size="4x"/>
 						</a>
 					</li>
-					<li className="list-inline-item social-twitter">
-						<a style={{padding:'25px'}} target="blank" href="https://twitter.com/kumarsgoyal_">
-						<FontAwesome name="twitter" className="mb-3" size="4x"/>
+					<li className="list-inline-item social-github">
+						<a style={{padding:'25px'}} target="blank" href="https://github.com/kumarsgoyal">
+						<FontAwesome name="github" className="mb-3" size="4x"/>
+						</a>
+					</li>
+				</ul>
+
+				<p style={{textAlign:'center'}}>
+					<Button size="large" disabled>
+						<h2 style={{fontFamily:'Courier New', color:'#031dad', fontWeight:'bold'}}>
+						Rishabhveer.
+						</h2>
+					</Button>
+				</p>
+				<ul className="list-inline list-social" style={{textAlign:'center'}}>
+					<li className="list-inline-item social-linkedin">
+						<a style={{padding:'25px'}} target="blank" href="https://www.linkedin.com/in/rishabhveer-singh-993bb917a/">
+						<FontAwesome name="linkedin" className="mb-3" size="4x"/>
 						</a>
 					</li>
 					<li className="list-inline-item social-github">
-						<a style={{padding:'25px'}} target="blank" href="https://github.com/kumarsgoyal">
+						<a style={{padding:'25px'}} target="blank" href="https://github.com/rishabhkailey">
+						<FontAwesome name="github" className="mb-3" size="4x"/>
+						</a>
+					</li>
+				</ul>	
+
+				<p style={{textAlign:'center'}}>
+					<Button size="large" disabled>
+						<h2 style={{fontFamily:'Courier New', color:'#031dad', fontWeight:'bold'}}>
+						Puneet.
+						</h2>
+					</Button>
+				</p>
+				<ul className="list-inline list-social" style={{textAlign:'center'}}>
+					<li className="list-inline-item social-linkedin">
+						<a style={{padding:'25px'}} target="blank" href="https://www.linkedin.com/in/puneet-mittal-01a593199/">
+						<FontAwesome name="linkedin" className="mb-3" size="4x"/>
+						</a>
+					</li>
+					<li className="list-inline-item social-github">
+						<a style={{padding:'25px'}} target="blank" href="https://github.com/PM74367">
 						<FontAwesome name="github" className="mb-3" size="4x"/>
 						</a>
 					</li>

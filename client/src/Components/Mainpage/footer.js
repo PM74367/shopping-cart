@@ -7,7 +7,7 @@ const Footer = ()=> (
             <div className="bg-dark">
                 <center>
                 <p style={{fontFamily:'Courier New', color:'white'}}>
-                    © Shoping Cart 2020.
+                    © Shopping Cart 2020.
                 </p>
                 <ul className="list-inline">
                     <li className="list-inline-item">

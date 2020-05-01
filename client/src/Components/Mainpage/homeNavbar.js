@@ -4,11 +4,6 @@ import {Link} from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 
 
-const style = {
-    margin: 15,
-    color:'red'
-};
-
 class HomeNavbar extends Component {
     render() {
         return (
@@ -18,25 +13,25 @@ class HomeNavbar extends Component {
                 <li className="nav-item" style={{padding:'5px 25px'}}>
                 	<Button size="large" color="primary" disabled>
                 		<h2 style={{fontFamily:'Courier New', textAlign:'center', color:'#f7a90c', fontWeight:'bold'}}>
-                    		Shoping cart.
+                    		Shopping cart.
                 		</h2>
                 	</Button>
                 </li>
             </ul>
             <ul className="navbar-nav">
                 <li className="nav-item" style={{padding:'5px 20px', float:'right'}}>
-                        {/* <Link to='/Login'> */}
+                        <Link to='/Login'>
                             <Button color="primary" size="large" variant="contained">
                                 Login
                             </Button>
-                        {/* </Link> */}
+                        </Link>
                     </li>
                     <li className="nav-item" style={{padding:'5px 20px', float:'right'}}>
-                        {/* <Link to='/Register'> */}
+                        <Link to='/Register'>
                             <Button color="primary" size="large" variant="contained">
                                 Register
                             </Button>
-                        {/* </Link> */}
+                        </Link>
                     </li>
                 </ul>
             </nav>
