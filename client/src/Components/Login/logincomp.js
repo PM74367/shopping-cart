@@ -86,7 +86,7 @@ class Logincomp extends Component {
                                 variant="outlined"
                                 autoFocus
                                 required
-                                onChange={(event, newValue) => this.setState({ username: newValue, show1: false })}
+                                onChange={(event) => this.setState({ username: event.target.value, show1: false })}
                             />
                             <div style={{height:'30px' }}> 
                     
@@ -99,7 +99,7 @@ class Logincomp extends Component {
                                 required
                                 minLength="8"
                                 maxLength="12"
-                                onChange={(event, newValue) => this.setState({ password: newValue, show2: false })}
+                                onChange={(event) => this.setState({ password: event.target.value, show2: false })}
                             />
                             <br />
                             <div style={{height:'25px' }}> 
