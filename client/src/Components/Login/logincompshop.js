@@ -37,7 +37,7 @@ class Logincomp extends Component {
             password: this.state.password
         };
 
-        fetch("http://localhost:5000/login", {
+        fetch("http://localhost:5000/loginshop", {
             credentials: 'include',
             method: "POST",
             headers: {
@@ -115,13 +115,17 @@ class Logincomp extends Component {
                         </div>
 
                         <br />
-                        <Link to='/Loginshop'>
+                        <Link to='/Login'>
                             <Button size="large" variant="contained" color="secondary">
                                 <h2 style={{fontFamily:'Courier New', textAlign:'center', fontWeight:'bold'}}>
-                                    Login As Seller
+                                    Login As Customer
                                 </h2>
                             </Button>
                         </Link>
+
+                        <div style={{height:'30px' }}> 
+                    
+                        </div>
 
                         <div style={{height:'100px' }}> 
                     

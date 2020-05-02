@@ -12,7 +12,7 @@ var sectionStyle = {
 	backgroundSize:'100% 100%'
 };
 
-class Registercomp extends Component {
+class Registercompshop extends Component {
     constructor(props){
         super(props);
         this.state={
@@ -21,6 +21,9 @@ class Registercomp extends Component {
             email: '',
             password1: '',
             password2: '',
+            phone: '',
+            shopname: '',
+            address: '',
             show1: false,
             error: ''
         }
@@ -35,9 +38,12 @@ class Registercomp extends Component {
             email: this.state.email.toLowerCase(),
             password1: this.state.password1,
             password2: this.state.password2,
+            phone_no: this.state.phone,
+            shop_name: this.state.shopname,
+            address: this.state.address
           };
 
-        fetch("http://localhost:5000/register", {
+        fetch("http://localhost:5000/registershop", {
             method: "POST",
             headers: {
                 Accept: 'application/json','Content-Type': 'application/json'
@@ -45,7 +51,7 @@ class Registercomp extends Component {
             body: JSON.stringify(newUser)
         }).then( res => {
             if(res.status === 200) {
-                history.push('/Login');
+                history.push('/Loginshop');
             }
             else if(res.status === 401) {
                 this.setState({show1:true, error: 'invalid credentials'});
@@ -122,6 +128,42 @@ class Registercomp extends Component {
                             </div>
 
                             <TextField
+                                id="phone"
+                                label="phone"
+                                variant="outlined"
+                                autoFocus
+                                required
+                                onChange = {(event, newValue) => this.setState({phone:newValue})}
+                            />
+                            <div style={{height:'30px' }}> 
+
+                            </div>
+
+                            <TextField
+                                id="shopname"
+                                label="Shop Name"
+                                variant="outlined"
+                                autoFocus
+                                required
+                                onChange = {(event, newValue) => this.setState({shopname:newValue})}
+                            />
+                            <div style={{height:'30px' }}> 
+
+                            </div>
+
+                            <TextField
+                                id="address"
+                                label="Shop Address"
+                                variant="outlined"
+                                autoFocus
+                                required
+                                onChange = {(event, newValue) => this.setState({address:newValue})}
+                            />
+                            <div style={{height:'30px' }}> 
+
+                            </div>
+
+                            <TextField
                                 id="password1"
                                 label="Password"
                                 type="password"
@@ -159,16 +201,13 @@ class Registercomp extends Component {
                         </div>
 
                         <br />
-
                         <Link to='/Registershop'>
                             <Button size="large" variant="contained" color="secondary">
                                 <h2 style={{fontFamily:'Courier New', textAlign:'center', fontWeight:'bold'}}>
-                                    Register As Seller
+                                Register As Customer
                                 </h2>
                             </Button>
                         </Link>
-
-                        
 
                         <div style={{height:'100px' }}> 
                     
@@ -181,4 +220,4 @@ class Registercomp extends Component {
     }
 }
 
-export default Registercomp;
+export default Registercompshop;
